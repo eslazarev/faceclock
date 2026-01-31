@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaceClock</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22d3ee;
+      --accent-2: #a855f7;
+      --radius: 14px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(120% 120% at 20% 20%, rgba(34,211,238,0.08), transparent),
+                  radial-gradient(140% 140% at 80% 10%, rgba(168,85,247,0.09), transparent),
+                  var(--bg);
+      color: var(--text);
+      padding: 48px 20px 80px;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(34,211,238,0.12), rgba(168,85,247,0.12));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: -0.02em; }
+    p.lead { margin: 0; color: var(--muted); font-size: 16px; }
+    section {
+      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 24px 24px 18px;
+      box-shadow: var(--shadow);
+    }
+    h2 { margin-top: 0; color: var(--accent); letter-spacing: -0.01em; }
+    ul { padding-left: 20px; margin: 12px 0 0; }
+    li { margin: 6px 0; }
+    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>FaceClock</h1>
+      <p class="lead">On-device face recognition for time tracking — private by default, no cloud required.</p>
+    </div>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Face clock-ins/outs:</strong> Live camera preview with a single Capture button. Detected faces are matched locally; suggested action (In/Out) can auto-trigger after a timeout.</li>
+        <li><strong>Offline by design:</strong> Face detection  and recognition run entirely on-device; data is stored in a local Room database with photos on disk.</li>
+        <li><strong>Shift logic:</strong> If the last shift is closed, suggest check-in; if it’s open but older than Max shift hours, suggest starting a new shift; otherwise suggest check-out.</li>
+        <li><strong>Employees:</strong> Add, rename, delete; photos and embeddings stay local.</li>
+        <li><strong>Shifts:</strong> Browse history with in/out photos and durations; tap photos to view full-screen.</li>
+        <li><strong>Settings:</strong> Adjust Max shift hours, default dialog timeout, and Keep screen on. Info popups explain each; keeping the screen on increases battery drain—use a charger.</li>
+        <li><strong>Background cleanup:</strong> WorkManager prunes old shifts/photos after the retention window.</li>
+      </ul>
+    </section>
+
+
+    <footer>FaceClock · On-device · Private · Fast</footer>
+  </div>
+</body>
+</html>
