@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — FaceClock</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22d3ee;
+      --accent-2: #a855f7;
+      --radius: 14px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(120% 120% at 20% 20%, rgba(34,211,238,0.08), transparent),
+                  radial-gradient(140% 140% at 80% 10%, rgba(168,85,247,0.09), transparent),
+                  var(--bg);
+      color: var(--text);
+      padding: 48px 20px 80px;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(34,211,238,0.12), rgba(168,85,247,0.12));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 6px; font-size: 32px; letter-spacing: -0.02em; }
+    p.lead { margin: 0; color: var(--muted); font-size: 16px; }
+    .back { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back:hover { text-decoration: underline; }
+    section {
+      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 24px 24px 18px;
+      box-shadow: var(--shadow);
+    }
+    h2 { margin-top: 0; color: var(--accent); letter-spacing: -0.01em; }
+    h3 { color: var(--text); margin: 18px 0 8px; }
+    ul, ol { padding-left: 20px; margin: 12px 0 0; }
+    li { margin: 6px 0; }
+    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 0; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    th { color: var(--accent); font-weight: 600; }
+    a { color: var(--accent); }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <a class="back" href="index.html">&larr; Back to FaceClock</a>
+      <h1>Privacy Policy</h1>
+      <p class="lead">Last Updated: January 30, 2026</p>
+    </div>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>FaceClock ("we," "our," or "the app") is a workforce time tracking application that uses facial recognition technology to verify employee attendance. This Privacy Policy explains how we collect, use, store, and protect your information.</p>
+    </section>
+
+    <section>
+      <h2>Information We Collect</h2>
+
+      <h3>Biometric Data</h3>
+      <ul>
+        <li><strong>Facial Images:</strong> The app captures photographs of employees' faces during registration and clock-in/clock-out events.</li>
+        <li><strong>Facial Embeddings:</strong> Mathematical representations of facial features are generated and stored locally on your device for identity verification purposes.</li>
+      </ul>
+
+      <h3>Employee Information</h3>
+      <ul>
+        <li>Employee names</li>
+        <li>Employee identification numbers</li>
+        <li>Profile photographs</li>
+      </ul>
+
+      <h3>Time and Attendance Data</h3>
+      <ul>
+        <li>Clock-in and clock-out timestamps</li>
+        <li>Shift duration records</li>
+        <li>Photographs taken at clock-in/clock-out events</li>
+      </ul>
+
+      <h3>Device Information</h3>
+      <ul>
+        <li>Device settings preferences (e.g., screen timeout, maximum shift hours)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p>We use the collected information solely for:</p>
+      <ul>
+        <li>Verifying employee identity during clock-in and clock-out</li>
+        <li>Recording attendance and shift data</li>
+        <li>Generating time tracking reports</li>
+        <li>Managing employee profiles within your organization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+
+      <h3>Local Storage Only</h3>
+      <p><strong>All data is stored exclusively on your device.</strong> FaceClock operates entirely offline and does not:</p>
+      <ul>
+        <li>Transmit data to external servers</li>
+        <li>Use cloud storage services</li>
+        <li>Share data with third parties</li>
+        <li>Require internet connectivity</li>
+      </ul>
+      <p>Data is stored in:</p>
+      <ul>
+        <li>A local SQLite database within the app's private directory</li>
+        <li>The app's private file storage for photographs</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <ul>
+        <li>All data is stored in the app's private storage area, inaccessible to other applications</li>
+        <li>Photos and database files are protected by Android's application sandboxing</li>
+        <li>The app does not request network permissions</li>
+      </ul>
+
+      <h3>No Remote Access</h3>
+      <p><strong>Important:</strong> The developer has no ability to remotely access, view, modify, or delete any data stored by this app. Because FaceClock:</p>
+      <ul>
+        <li>Does not connect to the internet</li>
+        <li>Does not have any server infrastructure</li>
+        <li>Stores all data exclusively on your local device</li>
+      </ul>
+      <p>The developer cannot assist with data recovery, remote data deletion, or accessing your stored information under any circumstances. All data management must be performed directly on the device where the app is installed.</p>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+
+      <h3>Automatic Data Cleanup</h3>
+      <ul>
+        <li>Shift records and associated photographs older than <strong>90 days</strong> are automatically deleted</li>
+        <li>This cleanup process runs periodically in the background</li>
+        <li>Employee profiles and registration photos are retained until manually deleted by an administrator</li>
+      </ul>
+
+      <h3>Manual Deletion</h3>
+      <ul>
+        <li>Administrators can delete individual employee records at any time</li>
+        <li>Uninstalling the app removes all stored data from the device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Biometric Data Disclosure</h2>
+      <p>In accordance with biometric privacy regulations:</p>
+      <ol>
+        <li><strong>Purpose:</strong> Facial recognition is used solely for employee identity verification during time tracking.</li>
+        <li><strong>Storage:</strong> Biometric data (facial embeddings) is stored only on the local device and is never transmitted externally.</li>
+        <li><strong>Retention:</strong> Biometric templates are retained for as long as the employee profile exists in the system.</li>
+        <li><strong>No Sale or Sharing:</strong> We do not sell, lease, trade, or otherwise profit from biometric data.</li>
+        <li><strong>Protection:</strong> Biometric data is protected using Android's built-in application security model.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Google Cloud Backup</h2>
+      <p>By default, Android may back up app data to Google Cloud. We recommend:</p>
+      <ul>
+        <li>Disabling backup for this app in your device settings if you have concerns about biometric data in cloud backups</li>
+        <li>Consulting your organization's data protection policies regarding cloud backup of employee information</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>FaceClock is intended for workplace use by adults. We do not knowingly collect information from children under 13 years of age.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>Since all data is stored locally on the device and the developer has no access to it, any requests regarding your personal data must be directed to the device administrator or organization that operates the FaceClock installation.</p>
+      <p>The device administrator can:</p>
+      <ul>
+        <li>Show you what data is stored about you in the app</li>
+        <li>Delete your employee profile and all associated data</li>
+        <li>Uninstall the app to remove all data completely</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Controller</h2>
+      <p>The organization or individual that deploys FaceClock on their devices acts as the sole data controller. They are responsible for:</p>
+      <ul>
+        <li>Obtaining appropriate consent from employees</li>
+        <li>Complying with applicable privacy laws</li>
+        <li>Managing data subject requests</li>
+        <li>All data management and deletion</li>
+      </ul>
+      <p><strong>The developer (Evgeny Lazarev) is not a data controller or processor</strong> as no data is transmitted to or accessible by the developer. The developer provides only the software application itself.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>Compliance</h2>
+      <p>This app is designed to support compliance with:</p>
+      <ul>
+        <li>General Data Protection Regulation (GDPR)</li>
+        <li>California Consumer Privacy Act (CCPA)</li>
+        <li>Illinois Biometric Information Privacy Act (BIPA)</li>
+        <li>Other applicable biometric and data protection laws</li>
+      </ul>
+      <p>Organizations deploying this app are responsible for ensuring their use complies with local regulations.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><strong>Developer:</strong> Evgenii Lazarev<br>
+      <strong>GitHub:</strong> <a href="https://github.com/eslazarev/faceclock">github.com/eslazarev/faceclock</a><br>
+      <strong>Email:</strong> <a href="mailto:eslazarev@gmail.com">eslazarev@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <table>
+        <thead>
+          <tr><th>Data Type</th><th>Collected</th><th>Stored Locally</th><th>Sent to Servers</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Facial Images</td><td>Yes</td><td>Yes</td><td>No</td><td>Until deleted</td></tr>
+          <tr><td>Facial Embeddings</td><td>Yes</td><td>Yes</td><td>No</td><td>Until deleted</td></tr>
+          <tr><td>Employee Names/IDs</td><td>Yes</td><td>Yes</td><td>No</td><td>Until deleted</td></tr>
+          <tr><td>Shift Records</td><td>Yes</td><td>Yes</td><td>No</td><td>90 days</td></tr>
+          <tr><td>Shift Photos</td><td>Yes</td><td>Yes</td><td>No</td><td>90 days</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px"><strong>Key Points:</strong></p>
+      <ul>
+        <li>All data stays on your device</li>
+        <li>FaceClock never connects to the internet</li>
+        <li>The developer cannot remotely access or delete your data</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="index.html" style="color:var(--accent);text-decoration:none;">FaceClock</a>
+      <br>On-device · Private · Fast
+    </footer>
+  </div>
+</body>
+</html>
