@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FaceClock</title>
+  <title>FaceClock - Offline Face Recognition Time Tracking</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -26,10 +26,7 @@
       padding: 48px 20px 80px;
       line-height: 1.6;
     }
-    .wrap {
-      max-width: 880px;
-      margin: 0 auto;
-    }
+    .wrap { max-width: 880px; margin: 0 auto; }
     .hero {
       background: linear-gradient(135deg, rgba(34,211,238,0.12), rgba(168,85,247,0.12));
       border: 1px solid rgba(255,255,255,0.08);
@@ -39,33 +36,32 @@
     }
     h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: -0.02em; }
     p.lead { margin: 0; color: var(--muted); font-size: 16px; }
-    .lang-switch {
-      position: absolute;
-      top: 16px;
-      right: 20px;
-      font-size: 14px;
-    }
+    .lang-switch { position: absolute; top: 16px; right: 20px; font-size: 14px; }
     .lang-switch a {
-      color: var(--accent);
-      text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8px;
+      color: var(--accent); text-decoration: none; padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
     }
     .lang-switch a:hover { background: rgba(34,211,238,0.12); }
     section {
-      margin-top: 32px;
-      background: var(--card);
+      margin-top: 32px; background: var(--card);
       border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius);
-      padding: 24px 24px 18px;
+      border-radius: var(--radius); padding: 24px 24px 18px;
       box-shadow: var(--shadow);
     }
     h2 { margin-top: 0; color: var(--accent); letter-spacing: -0.01em; }
     ul { padding-left: 20px; margin: 12px 0 0; }
     li { margin: 6px 0; }
-    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; }
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; }
+    .screenshots { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0; }
+    .screenshots img { height: 320px; border-radius: 10px; cursor: pointer; transition: transform 0.15s; }
+    .screenshots img:hover { transform: scale(1.03); }
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-height: 90vh; max-width: 90vw; border-radius: 12px; }
   </style>
 </head>
 <body>
@@ -92,11 +88,11 @@
 
     <section>
       <h2>Screenshots</h2>
-      <div style="display:flex;gap:12px;overflow-x:auto;padding:8px 0;">
-        <img src="screenshots/01_clock.png" alt="Clock" style="height:320px;border-radius:10px;">
-        <img src="screenshots/02_employees.png" alt="Employees" style="height:320px;border-radius:10px;">
-        <img src="screenshots/03_shifts.png" alt="Shifts" style="height:320px;border-radius:10px;">
-        <img src="screenshots/04_settings.png" alt="Settings" style="height:320px;border-radius:10px;">
+      <div class="screenshots">
+        <img src="screenshots/01_clock.png" alt="Clock" onclick="openLightbox(this)">
+        <img src="screenshots/02_employees.png" alt="Employees" onclick="openLightbox(this)">
+        <img src="screenshots/03_shifts.png" alt="Shifts" onclick="openLightbox(this)">
+        <img src="screenshots/04_settings.png" alt="Settings" onclick="openLightbox(this)">
       </div>
     </section>
 
@@ -105,5 +101,22 @@
       <br>FaceClock - On-device - Private - Fast
     </footer>
   </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(el) {
+      document.getElementById('lightbox-img').src = el.src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>
