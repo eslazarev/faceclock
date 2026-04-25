@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,39 +70,39 @@
 </head>
 <body>
   <div class="wrap" style="position:relative;">
-    <div class="lang-switch"><a href="index-ru.html">RU</a></div>
+    <div class="lang-switch"><a href="index.html">EN</a></div>
 
     <div class="hero">
       <h1>FaceClock</h1>
-      <p class="lead">On-device face recognition for time tracking - private by default, no cloud required.</p>
+      <p class="lead">Учёт рабочего времени с распознаванием лиц на устройстве - без облака и интернета.</p>
     </div>
 
     <section>
-      <h2>What it does</h2>
+      <h2>Возможности</h2>
       <ul>
-        <li><strong>Face clock-ins/outs:</strong> Live camera preview with a single Capture button. Detected faces are matched locally; suggested action (In/Out) can auto-trigger after a timeout.</li>
-        <li><strong>Offline by design:</strong> Face detection and recognition run entirely on-device; data is stored in a local Room database with photos on disk.</li>
-        <li><strong>Shift logic:</strong> If the last shift is closed, suggest check-in; if it's open but older than Max shift hours, suggest starting a new shift; otherwise suggest check-out.</li>
-        <li><strong>Employees:</strong> Add, rename, delete; photos and embeddings stay local.</li>
-        <li><strong>Shifts:</strong> Browse history with in/out photos and durations; export to CSV.</li>
-        <li><strong>Settings:</strong> Adjust Max shift hours, default dialog timeout, Keep screen on, and app language.</li>
-        <li><strong>Background cleanup:</strong> WorkManager prunes old shifts/photos after 90 days.</li>
+        <li><strong>Вход/выход по лицу:</strong> Камера в реальном времени с кнопкой «Снимок». Лица распознаются локально; предложенное действие (Вход/Выход) может сработать автоматически по таймеру.</li>
+        <li><strong>Полностью офлайн:</strong> Обнаружение и распознавание лиц работают на устройстве; данные хранятся в локальной базе, фото - на диске.</li>
+        <li><strong>Логика смен:</strong> Если последняя смена закрыта - предлагается вход; если открыта дольше максимума - новая смена; иначе - выход.</li>
+        <li><strong>Сотрудники:</strong> Добавление, переименование, удаление; фото и данные остаются на устройстве.</li>
+        <li><strong>Смены:</strong> История с фото входа/выхода и длительностью; экспорт в CSV.</li>
+        <li><strong>Настройки:</strong> Макс. часов смены, таймаут кнопок, не выключать экран, выбор языка.</li>
+        <li><strong>Автоочистка:</strong> Старые смены и фото удаляются автоматически через 90 дней.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Screenshots</h2>
+      <h2>Скриншоты</h2>
       <div style="display:flex;gap:12px;overflow-x:auto;padding:8px 0;">
-        <img src="screenshots/01_clock.png" alt="Clock" style="height:320px;border-radius:10px;">
-        <img src="screenshots/02_employees.png" alt="Employees" style="height:320px;border-radius:10px;">
-        <img src="screenshots/03_shifts.png" alt="Shifts" style="height:320px;border-radius:10px;">
-        <img src="screenshots/04_settings.png" alt="Settings" style="height:320px;border-radius:10px;">
+        <img src="screenshots/01_clock.png" alt="Часы" style="height:320px;border-radius:10px;">
+        <img src="screenshots/02_employees.png" alt="Сотрудники" style="height:320px;border-radius:10px;">
+        <img src="screenshots/03_shifts.png" alt="Смены" style="height:320px;border-radius:10px;">
+        <img src="screenshots/04_settings.png" alt="Настройки" style="height:320px;border-radius:10px;">
       </div>
     </section>
 
     <footer>
-      <a href="privacy-policy.html" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>
-      <br>FaceClock - On-device - Private - Fast
+      <a href="privacy-policy.html" style="color:var(--accent);text-decoration:none;">Политика конфиденциальности</a>
+      <br>FaceClock - На устройстве - Приватно - Быстро
     </footer>
   </div>
 </body>
