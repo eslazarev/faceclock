@@ -1,0 +1,38 @@
+# FaceClock
+
+> FaceClock is a free Android app for employee time tracking that uses on-device face recognition. It works fully offline, stores all data locally on the device, and does not require any cloud or internet connection.
+
+FaceClock is open source and distributed via Google Play. The app is designed for small businesses, workshops, and teams that need a simple way to track work shifts using face recognition without sending biometric data anywhere.
+
+Key facts:
+- Platform: Android (phones, tablets, Chromebooks)
+- Package ID: io.github.eslazarev.faceclock
+- Google Play: https://play.google.com/store/apps/details?id=io.github.eslazarev.faceclock
+- Source code and project page: https://github.com/eslazarev/faceclock
+- License: free of charge on Google Play
+- Privacy model: 100% on-device, no cloud, no analytics, no network calls for face data
+- Data storage: local Room (SQLite) database; photos stored on the device's internal storage
+- Data retention: shifts and photos older than 90 days are automatically removed by a background WorkManager job
+- Languages: English, Russian
+
+## Features
+
+- Face check-in / check-out with live camera preview and a single Capture button
+- On-device face detection and recognition (no biometric data leaves the device)
+- Automatic suggested action (In/Out) that can auto-trigger after a configurable timeout
+- Shift logic: if the last shift is closed -> check-in; if open longer than Max shift hours -> start new shift; otherwise -> check-out
+- Employee management: add, rename, delete; photos and embeddings stay local
+- Shift history with in/out photos and durations
+- CSV export of shift history
+- Configurable settings: Max shift hours, default dialog timeout, Keep screen on, app language
+
+## Pages
+
+- [Landing page (English)](https://eslazarev.github.io/faceclock/index.html): main product page in English
+- [Landing page (Russian)](https://eslazarev.github.io/faceclock/index-ru.html): main product page in Russian
+- [Privacy Policy](https://eslazarev.github.io/faceclock/privacy-policy.html): how data is handled (short answer: it stays on the device)
+
+## Contact
+
+- Author: Evgenii Lazarev
+- GitHub: https://github.com/eslazarev/faceclock
